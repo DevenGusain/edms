@@ -1,0 +1,121 @@
+﻿@{
+
+    ViewData["Title"] = "Edit Entry";
+}
+
+
+<div class="pagetitle">
+    <h1>Form Elements</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item">Forms</li>
+            <li class="breadcrumb-item active">Edit Entry</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<script src="~/js/entryform.js"></script>
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-10">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Letter Details</h5>
+
+                    <!-- General Form Elements -->
+                    <form>
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Letter No.</label>
+                            <div class="col-sm-10">
+                                <select class="form-select" aria-label="Default select example" id="lt_no" required>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="lt_date" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="inputText" class="col-sm-2 col-form-label">Subject</label>
+                            <div class="col-sm-10">
+                                <input id="lt_subject" type="text" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Letter Category</label>
+                            <div class="col-sm-10">
+                                <input id="lt_category" type="text" class="form-control" required>                                
+                            </div>
+                        </div>
+
+
+                        <fieldset class="row mb-3">
+                            <legend class="col-form-label col-sm-2 pt-0">Language</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="langGridRadios" id="gd_hindi" value="Hindi">
+                                    <label class="form-check-label" for="gd_hindi">
+                                        Hindi
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="langGridRadios" id="gd_eng" value="English">
+                                    <label class="form-check-label" for="gd_eng">
+                                        English
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="row mb-3">
+                            <legend class="col-form-label col-sm-2 pt-0">Mode</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="modeGridRadios" id="gd_hardcopy" value="Hard-Copy">
+                                    <label class="form-check-label" for="gd_hardcopy">
+                                        Hard-Copy
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="modeGridRadios" id="gd_email" value="Email">
+                                    <label class="form-check-label" for="gd_email">
+                                        Email
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="row mb-3">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Remarks</label>
+                            <div class="col-sm-10">
+                                <textarea id="lt_remarks" class="form-control" style="height: 100px"></textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" id="btn_update">Update</button>
+                            <button type="reset" class="btn btn-secondary" id="btn_reset">Reset</button>
+                        </div>
+
+                    </form>
+
+                    <!-- End General Form Elements -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
