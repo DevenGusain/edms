@@ -13,14 +13,7 @@ namespace e_DMS.Controllers
             _dbcontext = context;
         }
 
-        public IActionResult AddEmployee()
-        {
-            return View();
-        }
-
-
-
-        public IActionResult AddLetterCategory()
+       public IActionResult AddLetterCategory()
         {
             return View();
         }
@@ -46,7 +39,34 @@ namespace e_DMS.Controllers
         
         }
 
-       
+
+
+        [HttpGet]
+        public IActionResult ListEmployees()
+        {
+             List<SelectListItem> emp_list = _dbcontext.Employee.OrderBy(x=>x.Id).Select(x => new SelectListItem { Text=x.Name, Value=x.Id.ToString()}).ToList();
+            return Json(emp_list);
+        }
+
+
+        [HttpGet]
+        public IActionResult AddEmployee()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddEmployee(Employee emp)
+        {
+            
+            _dbcontext.Employee.Add(emp);
+            var response = _dbcontext.SaveChanges();
+            return Json(response);
+
+        }
+
+
+
 
 
 

@@ -35,11 +35,7 @@ namespace e_DMS.Controllers
             return Json(submit);
         }
 
-        public IActionResult MarkForm()
-        {
-            return View();
-        }
-
+       
 
         public IActionResult EditEntry()
         { 
@@ -72,8 +68,32 @@ namespace e_DMS.Controllers
             return Json(update);
         }
 
+        [HttpGet]
+        public IActionResult MarkForm()
+        {
+            return View();
+        }
 
 
+        [HttpGet]
+        public IActionResult load_employee()
+        {
+            List<SelectListItem> employee_list = new List<SelectListItem>();
+            employee_list = _dbcontext.Employee.Select(x=>new SelectListItem { Text=x.Name, Value= Convert.ToString(x.Id)}).ToList();
+
+            return Json(employee_list);
+        }
+
+
+
+        
+        //public IActionResult MarkForm(string lt_no)
+        //{
+        //    Letter_Entry_Table lt_entry_details_load = new Letter_Entry_Table();
+        //    lt_entry_details_load = _dbcontext.Letter_Entry_Table.Where(x=>x.letter_no == lt_no).FirstOrDefault();
+
+        //    return Json(lt_entry_details_load);
+        //}
         
         
 
