@@ -17,7 +17,7 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: true);
 builder.Services.AddDbContext<MyDbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection")));
 
 builder.Services.AddRazorPages();
-
+builder.Services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
 
 var app = builder.Build();
 

@@ -3,7 +3,8 @@
 namespace e_DMS.Models
 {
     public class Letter_Entry_Table
-    {      
+    {
+        [Key]   
         public string Id { get; set; }
         public string letter_no { get; set; }
         

@@ -17,5 +17,7 @@ namespace e_DMS.Models
         public DbSet<Letter_Entry_Table> Letter_Entry_Table { get; set; }
         
         public DbSet<Employee> Employee { get; set; }
+
+        public DbSet<Letter_Marked> Letter_Marked { get; set; }
     }
 }

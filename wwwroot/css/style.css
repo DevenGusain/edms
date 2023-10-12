@@ -31,7 +31,7 @@ a:hover {
   text-decoration: none;
 }
 
-#preloader {
+/*#preloader {
     background: #000 url(../img/loader.gif) no-repeat center center;
     position: fixed;
     background-size: 25%;
@@ -41,7 +41,7 @@ a:hover {
     opacity: 0.5;
     z-index: 100;
     margin: 0px;
-}
+}*/
 
 
 h1,

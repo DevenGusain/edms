@@ -33,100 +33,114 @@
                             </div>
                         </div>
 
+                        <div class="row mb-3"></div>
+
                         <div class="row mb-3">
-                            <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+                            <label for="inputDate" class="col-sm-2 col-form-label">Date (dd-mm-yyyy) </label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="txt_date" placeholder="MM/dd/YYYY" readonly>
+                                <input type="text" class="form-control" id="txt_date" placeholder="dd-MM-YYYY" readonly>
                             </div>
                         </div>
+
+                        <div class="row mb-3"></div>
 
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-2 col-form-label">Subject</label>
                             <div class="col-sm-10">
-                                <input id="lt_no" type="text" class="form-control">
+                                <input id="txt_subject" type="text" class="form-control" >
                             </div>
                         </div>
+
+                        <div class="row mb-3"></div>
+
+                        <div class="row mb-3">
+                            <label for="txt_category" class="col-sm-2 col-form-label">Letter Category</label>
+                            <div class="col-sm-10">
+                                <input id="txt_category" type="text" class="form-control" >
+                            </div>
+                        </div>
+
+
+                        <div class="row mb-3"></div>
 
                         <fieldset class="row mb-3">
                             <legend class="col-form-label col-sm-2 pt-0">Language</legend>
                             <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="1">
-                                    <label class="form-check-label" for="gridRadios1">
-                                        Hindi
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="0">
-                                    <label class="form-check-label" for="gridRadios2">
-                                        English
-                                    </label>
-                                </div>
+                                @*  <div class="form-check"> *@
+                                <input class="form-check-input" type="radio" name="langGridRadios" id="gd_hindi" value="Hindi" disabled>
+                                <label class="form-check-label" for="gd_hindi">
+                                    Hindi
+                                </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                @* </div> *@
+                                @* <div class="form-check"> *@
+                                <input class="form-check-input" type="radio" name="langGridRadios" id="gd_eng" value="English" disabled>
+                                <label class="form-check-label" for="gd_eng">
+                                    English
+                                </label>
+                                @*  </div> *@
                             </div>
                         </fieldset>
+
+                        <div class="row mb-3"></div>
 
                         <fieldset class="row mb-3">
                             <legend class="col-form-label col-sm-2 pt-0">Mode</legend>
                             <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="modeGridRadios" id="gridRadios3" value="1">
-                                    <label class="form-check-label" for="gridRadios1">
-                                        Hard-Copy
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="modeGridRadios" id="gridRadios2" value="0">
-                                    <label class="form-check-label" for="gridRadios2">
-                                        Email
-                                    </label>
-                                </div>
+
+                                <input class="form-check-input" type="radio" name="modeGridRadios" id="gd_email" value="Email" disabled>
+                                <label class="form-check-label" for="gd_email">
+                                    Email
+                                </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <input class="form-check-input" type="radio" name="modeGridRadios" id="gd_hardcopy" value="Hard-Copy" disabled>
+                                <label class="form-check-label" for="gd_hardcopy">
+                                    Hard-Copy
+                                </label>
                             </div>
                         </fieldset>
 
+                        <div class="row mb-3"></div>
+
                         <div class="row mb-3">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Remarks</label>
+                            <label for="txt_remarks" class="col-sm-2 col-form-label">Remarks</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" style="height: 100px"></textarea>
+                                <textarea class="form-control" style="height: 100px" id="txt_remarks" readonly></textarea>
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="inputNumber" class="col-sm-2 col-form-label">File Upload</label>
-                            <div class="col-sm-10">
-                                <input class="form-control" type="file" id="formFile" required>
-                            </div>
-                        </div>
+                        <div class="row mb-3"></div>
 
                         <div class="row mb-3">
                             <legend class="col-form-label col-sm-2 pt-0">Sections</legend>
-                            <div class="col-sm-10" id="check_box_group">
+                            <div class="col-sm-10" id="check_box_group" name="check_box_group">
 
                                 @* this part is rendering through jquery *@
 
-                                  @* <div class="form-check"> 
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1" value="gridCheck1">
-                                    <label class="form-check-label" for="gridCheck1">Example checkbox </label>
-
-                                    
-                                    <input class="form-check-input" type="checkbox" id="gridCheck2" value="gridCheck2">
-                                    <label class="form-check-label" for="gridCheck2">Example checkbox </label>
-
-
-
-                                <input class="form-check-input" type="checkbox" id="gridCheck3" value="gridCheck3">
-                                <label class="form-check-label" for="gridCheck3">Example checkbox </label>
-                               </div>                             *@
-
                             </div>
                         </div>
 
+                        <div class="row mb-3"></div>
+
+                        
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label">Submit Button</label>
-                            <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Submit Form</button>
+                            <label @* for="upload_file" *@ class="col-sm-2 col-form-label">File Upload</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" type="file" id="upload_file" accept="application/pdf" >
+                            </div>
+                            <div class="col-sm-1">
+                                 <input asp-page-handler="Upload" class="btn btn-outline-info" value="Upload" id="btn_upload" /> 
                             </div>
                         </div>
+                       
 
+                        <div class="row mb-3"></div>
+
+                        <div class="text-center">
+                            <button type="btn_submit" class="btn btn-primary" id="btn_update">Save</button>
+                            <button type="btn_reset" class="btn btn-secondary" id="btn_reset">Reset</button>
+                        </div>
+
+                        <p id="hidden_text"></p>
                     </form><!-- End General Form Elements -->
 
                 </div>

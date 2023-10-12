@@ -1,4 +1,7 @@
 ﻿$(document).ready(function () {
+
+
+
     $.ajax({
         url: '/Form/ListCategory',
         datatype:'json',
