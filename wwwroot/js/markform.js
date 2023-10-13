@@ -115,8 +115,6 @@ $(document).ready(function () {
       
     })
 
-
-
     $('#btn_upload').click(function (e) {
         try {
             var myFile = document.getElementById("upload_file").files[0];
@@ -150,8 +148,6 @@ $(document).ready(function () {
             alert('Error - ' + e)
         }
     })
-
-
 
     $('#btn_update').on('click', function (e) {
         var array = []
