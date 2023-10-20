@@ -25,10 +25,29 @@ namespace e_DMS.Controllers
 
         public IActionResult Index()
         {
+            Letter_Entry_Table letter_Entry_Table = new Letter_Entry_Table();
+            Letter_Marked letter_marked = new Letter_Marked();
+
+            int entry_count = _dbcontext.Letter_Entry_Table.Select(x => x.Id).Count() + _dbcontext.Letter_Marked.Select(x => x.Id).Count();
+            int marked_count = _dbcontext.Letter_Marked.Select(x => x.Id).Count();
+            int marked_percent;
+            marked_percent =   (marked_count * 100 / entry_count) ;
+
+            ViewBag.entry_count = entry_count;
+            ViewBag.marked_count = marked_count;
+            ViewBag.marked_percent = marked_percent;
+            
             return View();
         }
 
-       
+
+
+        [HttpGet]
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
        
 
         public IActionResult Privacy()

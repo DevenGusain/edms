@@ -15,5 +15,7 @@ namespace e_DMS.Models
         public string letter_remarks { get; set; }
         public string marked_to { get; set; }
         public string file_upload { get; set; }
+
+        public DateTime created_on { get; set; }
     }
 }

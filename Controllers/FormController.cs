@@ -71,13 +71,7 @@ namespace e_DMS.Controllers
             return Json(update);
         }
 
-        [HttpGet]
-        public IActionResult MarkForm()
-        {
-            return View();
-        }
-
-
+       
         [HttpGet]
         public IActionResult load_employee()
         {
@@ -89,10 +83,16 @@ namespace e_DMS.Controllers
 
 
 
+        [HttpGet]
+        public IActionResult MarkForm()
+        {
+            return View();
+        }
+
+
         //Upload file on server
 
         [HttpPost]
-        //[ValidateAntiForgeryToken]
         public async Task<bool>  Upload_pdf([FromForm] IFormFile cfile)
         {
             string path = "";
@@ -131,13 +131,17 @@ namespace e_DMS.Controllers
 
             lt_marked = lt_mark_query;
             lt_marked.file_upload = _filename;
+            lt_marked.created_on = DateTime.Now;
 
-            _filename = "";
+            
 
             var insert_result = _dbcontext.Letter_Marked.Add(lt_marked);
             var delete_result = _dbcontext.Letter_Entry_Table.Remove(letter_entry_removed);
 
             var final_result = _dbcontext.SaveChanges();
+
+
+            _filename = string.Empty;
 
             return Json(final_result);
         }

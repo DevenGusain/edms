@@ -118,8 +118,7 @@ $(document).ready(function () {
     $('#btn_upload').click(function (e) {
         try {
             var myFile = document.getElementById("upload_file").files[0];
-            var size = myFile.files[0].length;
-            if (document.getElementById("upload_files").files[0].length !=  0) {
+            if (myFile.size != 0) {
                 var form = new FormData();
                 form.append('cfile', myFile);
 
@@ -163,7 +162,7 @@ $(document).ready(function () {
 
             $('#hidden_text').text(array);
 
-            var marked_to_
+            var marked_to_ = $('#hidden_text').text();
 
             e.preventDefault();
 
@@ -205,17 +204,13 @@ $(document).ready(function () {
                             alert('Error - ' + exception)
                         }
                     })
-
-
-
-
                 }
                 catch (e) {
                     alert('Exception : - ' + e);
                 }
             }
         }
-    })
+    });
 
 
 
